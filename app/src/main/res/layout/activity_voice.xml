@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoiceActivity"
+    android:orientation="vertical"
+    android:weightSum="4"
+    >
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/visuals"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btnRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnRec"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_btn"
+        android:scaleType="center"
+        android:src="@drawable/ic_record"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="64dp"
+        android:fontFamily="@font/bungee"
+        android:text="The quick brown fox jumps over the lazy dog"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/gifView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <ImageView
+        android:id="@+id/practice_state"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/ic_basel_true"
+        app:layout_constraintBottom_toTopOf="@+id/btnRec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifView" />
+
+    <TextView
+        android:id="@+id/practice_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/6"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/practice_state"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/practice_state"
+        app:layout_constraintTop_toTopOf="@+id/practice_state" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
